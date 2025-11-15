@@ -23,3 +23,6 @@ def predict(data : InputData):
     pred = modelo.predict(arr)
     return {"prediction": int(pred[0])}
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
